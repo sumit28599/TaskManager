@@ -13,15 +13,12 @@ class TaskViewController: UIViewController {
     @IBOutlet weak var addBtnText: UIButton!
     @IBOutlet weak var taskTableView: UITableView!
     
-    
     let taskmanager = TaskManager()
     var filteredNames: [TaskEntity] = []
     var tasks: [TaskEntity] = []
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        
         self.fetchTasks()
         setUpTableView()
         searchTextField.addTarget(self, action: #selector(searchTextChanged), for: .editingChanged)
@@ -36,6 +33,7 @@ class TaskViewController: UIViewController {
         
     }
     
+    //MARK: Set Tableview required methods
     func setUpTableView() {
         taskTableView.delegate = self
         taskTableView.dataSource = self
@@ -44,6 +42,8 @@ class TaskViewController: UIViewController {
         taskTableView.rowHeight = 100
         taskTableView.backgroundColor = .clear
     }
+    
+    //MARK: Search Task According to title
     @objc func searchTextChanged() {
         guard let searchText = searchTextField.text, !searchText.isEmpty else {
             tasks = filteredNames
@@ -56,17 +56,19 @@ class TaskViewController: UIViewController {
         taskTableView.reloadData()
     }
     
+    //MARK: Add Task According to requirement
     @objc func addTaskBtnClick() {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "AddTaskViewController") as? AddTaskViewController
         self.navigationController?.pushViewController(vc!, animated: true)
     }
     
-    
+    //MARK: Getting data from local storage
     func fetchTasks() {
         guard let task = taskmanager.getTaskData() else { return}
         tasks = task
     }
     
+    //MARK: Edit data from local storage
     func editButtonTapped(_ index: IndexPath) {
         let vc = UIStoryboard.init(name: "Main", bundle: Bundle.main).instantiateViewController(withIdentifier: "DetailsViewController") as? DetailsViewController
         vc?.indexvalue = index.row
@@ -77,12 +79,9 @@ class TaskViewController: UIViewController {
 
 extension TaskViewController: UITableViewDelegate ,UITableViewDataSource {
     
-    
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         return tasks.count
     }
-    
-    
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: "TaskCell") as! TaskCell
@@ -96,14 +95,10 @@ extension TaskViewController: UITableViewDelegate ,UITableViewDataSource {
         return cell
     }
     
-    
-    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         tableView.deselectRow(at: indexPath, animated: true)
         self.editButtonTapped(indexPath)
     }
-    
-    
     
     func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCell.EditingStyle, forRowAt indexPath: IndexPath) {
         if editingStyle == .delete {
