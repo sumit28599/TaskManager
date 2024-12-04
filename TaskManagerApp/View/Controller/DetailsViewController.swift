@@ -26,7 +26,7 @@ class DetailsViewController: UIViewController {
     }
     
     func setUpView() {
-        descriptionTextView.layer.cornerRadius = 10
+        descriptionTextView.layer.cornerRadius = 8
         descriptionTextView.layer.masksToBounds = true
         updateBtnText.layer.cornerRadius = 10
         updateBtnText.layer.masksToBounds = true

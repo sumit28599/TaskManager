@@ -43,9 +43,9 @@ class TaskCell: UITableViewCell {
         let dueDateString = formatter.string(from: task.dueDate ?? Date())
         taskDueDatelbl.text = "Date \(dueDateString)"
         if task.isCompleted {
-            taskView.backgroundColor = .gray
+            taskView.backgroundColor = .green
         } else {
-            taskView.backgroundColor = .white
+            taskView.backgroundColor = .yellow
         }
     }
 }

@@ -22,7 +22,7 @@ class AddTaskViewController: UIViewController {
     
 
     func setUpView () {
-        submitBtnText.layer.cornerRadius = 10
+        submitBtnText.layer.cornerRadius = 8
         submitBtnText.layer.masksToBounds = true
         descriptionTextView.layer.cornerRadius = 10
         descriptionTextView.layer.masksToBounds = true 

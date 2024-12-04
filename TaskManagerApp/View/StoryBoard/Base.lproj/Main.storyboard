@@ -127,13 +127,13 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hEw-Fa-VQA">
-                                <rect key="frame" x="16" y="159" width="361" height="20.333333333333343"/>
-                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="17"/>
+                                <rect key="frame" x="16" y="69" width="361" height="24"/>
+                                <fontDescription key="fontDescription" type="system" weight="semibold" pointSize="20"/>
                                 <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <nil key="highlightedColor"/>
                             </label>
                             <textField opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="248" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="F41-fR-Dn3">
-                                <rect key="frame" x="16" y="199.33333333333334" width="361" height="40"/>
+                                <rect key="frame" x="16" y="113" width="361" height="40"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="40" id="ZR1-0W-bWL"/>
                                 </constraints>
@@ -141,13 +141,13 @@
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
                             <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nDR-6A-9Xg">
-                                <rect key="frame" x="128.33333333333331" y="497.33333333333326" width="136.33333333333331" height="35"/>
+                                <rect key="frame" x="128.33333333333331" y="411" width="136.33333333333331" height="35"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <state key="normal" title="Button"/>
                                 <buttonConfiguration key="configuration" style="plain" title="Update Details"/>
                             </button>
                             <textView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" textAlignment="natural" translatesAutoresizingMaskIntoConstraints="NO" id="cqa-PG-5ds">
-                                <rect key="frame" x="16" y="247.33333333333337" width="361" height="150"/>
+                                <rect key="frame" x="16" y="161" width="361" height="150"/>
                                 <color key="backgroundColor" systemColor="systemBackgroundColor"/>
                                 <constraints>
                                     <constraint firstAttribute="height" constant="150" id="NIz-e0-zDj"/>
@@ -164,7 +164,7 @@
                             <constraint firstItem="nDR-6A-9Xg" firstAttribute="top" secondItem="cqa-PG-5ds" secondAttribute="bottom" constant="100" id="9F7-zE-VWL"/>
                             <constraint firstItem="F41-fR-Dn3" firstAttribute="leading" secondItem="mNY-Vx-3Ju" secondAttribute="leading" constant="16" id="Bke-oH-OFG"/>
                             <constraint firstItem="mNY-Vx-3Ju" firstAttribute="trailing" secondItem="F41-fR-Dn3" secondAttribute="trailing" constant="16" id="DnG-tG-e5s"/>
-                            <constraint firstItem="hEw-Fa-VQA" firstAttribute="top" secondItem="mNY-Vx-3Ju" secondAttribute="top" constant="100" id="QNb-EU-UmI"/>
+                            <constraint firstItem="hEw-Fa-VQA" firstAttribute="top" secondItem="mNY-Vx-3Ju" secondAttribute="top" constant="10" id="QNb-EU-UmI"/>
                             <constraint firstItem="mNY-Vx-3Ju" firstAttribute="trailing" secondItem="cqa-PG-5ds" secondAttribute="trailing" constant="16" id="Y1W-NF-87J"/>
                             <constraint firstItem="F41-fR-Dn3" firstAttribute="top" secondItem="hEw-Fa-VQA" secondAttribute="bottom" constant="20" id="YSH-QB-66r"/>
                             <constraint firstItem="cqa-PG-5ds" firstAttribute="top" secondItem="F41-fR-Dn3" secondAttribute="bottom" constant="8" id="a3P-aR-zGU"/>
